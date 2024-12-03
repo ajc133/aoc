@@ -25,7 +25,7 @@ def extract_instructions(line: str) -> list[tuple[int, int]]:
 if __name__ == "__main__":
     lines = read_lines_from_file("day3.txt")
     total = 0
-    for line in lines:
-        for instruction in extract_instructions(line):
-            total += instruction[0] * instruction[1]
+    big_line = "".join(lines)
+    for instruction in extract_instructions(big_line):
+        total += instruction[0] * instruction[1]
     print("part 2:", total)
